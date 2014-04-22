@@ -22,7 +22,7 @@
 
     "autoload": {
         "psr-4": {
-            "tomkyle\\Emails": "src/"
+            "tomkyle\\Emails\\": "src/"
         }
     }
 

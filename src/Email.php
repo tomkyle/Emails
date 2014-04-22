@@ -32,14 +32,16 @@ class Email extends EmailAbstract implements EmailInterface
 	public function setAddress ( $address )
 	{
 		try {
-	    	if (preg_match('/@.+\./', $address)) {
-				parent::setAddress( $address );
-				return $this;
+	    	if (is_string( $address )
+	    	and !preg_match('/@.+\./', $address)) {
+	    		throw new AddressNotAcceptableException;
 	    	}
+			parent::setAddress( $address );
+			return $this;
 		}
 		catch ( \InvalidArgumentException $e ) {}
-
 		throw new AddressNotAcceptableException;
+
 	}
 
 
