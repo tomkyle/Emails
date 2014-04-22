@@ -1,0 +1,29 @@
+{
+    "name":        "tomkyle/emails",
+    "type":        "library",
+
+    "license": "MIT",
+
+    "authors": [
+        {
+            "name":  "Carsten Witt",
+            "email": "tomkyle@posteo.de",
+            "role":  "Developer"
+        }
+    ],
+
+    "require": {
+        "php": ">=5.4.0"
+    },
+
+    "require-dev": {
+        "satooshi/php-coveralls": "dev-master"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "tomkyle\\Emails": "src/"
+        }
+    }
+
+}
